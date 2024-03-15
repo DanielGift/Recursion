@@ -8,7 +8,7 @@ import java.awt.Container;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class sier extends JPanel
+public class Sierpinski extends JPanel
 {
     /*THIS SHOULD BE CHANGED TO HIGHER NUMBERS FOR TESTING!!!*/
     int n = 0; //sets the levels of recursion; this starts at 0 but you should test it at larger values
@@ -22,11 +22,15 @@ public class sier extends JPanel
         fractal(/*insert appropriate arguments here*/);
        
     }
-    public static void main(){
+    public static void main(String[] args){
+        try{
+            n = Integer.parseInt(args[0]);
+        }
+        catch(Exception e){}
         JFrame window = new JFrame("Sierpinski's Triangle");
         window.setBounds(100, 100, 700, 700);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        sier panel = new sier();
+        Sierpinski panel = new Sierpinski();
         panel.setBackground(Color.WHITE); 
         Container c = window.getContentPane(); 
         c.add(panel); 

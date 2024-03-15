@@ -1,11 +1,15 @@
 import java.util.*;
 
-public class pascal
+public class Pascal
 {
     /*THIS SHOULD BE CHANGED TO HIGHER NUMBERS FOR TESTING!!!*/
     private static int numRows = 1; //sets the levels of recursion; this starts at 0 but you should test it at larger values
     /*****************************/
-    public static void main(){
+    public static void main(String[] args){
+        try{
+            numRows = Integer.parseInt(args[0]);
+        }
+        catch(Exception e){}
         ArrayList<Integer> init = new ArrayList<Integer>();
         init.add(1);
         makerow(init, numRows);

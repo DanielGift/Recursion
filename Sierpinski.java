@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 public class Sierpinski extends JPanel
 {
     /*THIS SHOULD BE CHANGED TO HIGHER NUMBERS FOR TESTING!!!*/
-    int n = 0; //sets the levels of recursion; this starts at 0 but you should test it at larger values
+    static int n = 0; //sets the levels of recursion; this starts at 0 but you should test it at larger values
     /*****************************/
     
     public void paintComponent(Graphics g){
